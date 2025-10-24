@@ -1,0 +1,12 @@
+[package]
+name = "cctmux-notify"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+cctmux-protocol = { workspace = true }
+notify-rust = { workspace = true }
+anyhow = { workspace = true }

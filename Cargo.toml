@@ -1,0 +1,67 @@
+# Cargo workspace definition
+# Following OpenAI Codex design philosophy: separating functionality into
+# independent crates for scalability and maintainability
+
+[workspace]
+resolver = "2"
+members = [
+    "cctmux/protocol",
+    "cctmux/core",
+    "cctmux/common",
+    "cctmux/db",
+    "cctmux/tmux",
+    "cctmux/tui",
+    "cctmux/notify",
+    "cctmux/hooks",
+    "cctmux/daemon",
+    "cctmux/cli",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+authors = ["ryo-morimoto"]
+license = "MIT"
+repository = "https://github.com/ryo-morimoto/cctmux"
+
+[workspace.dependencies]
+# Internal crates
+cctmux-protocol = { path = "cctmux/protocol" }
+cctmux-core = { path = "cctmux/core" }
+cctmux-common = { path = "cctmux/common" }
+cctmux-db = { path = "cctmux/db" }
+cctmux-tmux = { path = "cctmux/tmux" }
+cctmux-tui = { path = "cctmux/tui" }
+cctmux-notify = { path = "cctmux/notify" }
+cctmux-hooks = { path = "cctmux/hooks" }
+
+# External dependencies - UI
+ratatui = "0.29"
+crossterm = "0.28"
+
+# External dependencies - CLI
+clap = { version = "4.5", features = ["derive"] }
+
+# External dependencies - Database
+rusqlite = { version = "0.32", features = ["bundled"] }
+
+# External dependencies - Async
+tokio = { version = "1.42", features = ["full"] }
+
+# External dependencies - Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# External dependencies - Notification
+notify-rust = "4.11"
+
+# External dependencies - Time
+chrono = "0.4"
+
+# External dependencies - Error handling
+anyhow = "1.0"
+thiserror = "2.0"
+
+# External dependencies - Logging
+tracing = "0.1"
+tracing-subscriber = "0.3"

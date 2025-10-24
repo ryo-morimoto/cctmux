@@ -1,0 +1,23 @@
+[package]
+name = "cctmux-daemon"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[[bin]]
+name = "cctmux-daemon"
+path = "src/main.rs"
+
+[dependencies]
+cctmux-protocol = { workspace = true }
+cctmux-core = { workspace = true }
+cctmux-db = { workspace = true }
+cctmux-tmux = { workspace = true }
+cctmux-notify = { workspace = true }
+cctmux-hooks = { workspace = true }
+tokio = { workspace = true }
+anyhow = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }

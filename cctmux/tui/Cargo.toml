@@ -1,0 +1,16 @@
+[package]
+name = "cctmux-tui"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+cctmux-protocol = { workspace = true }
+cctmux-core = { workspace = true }
+cctmux-tmux = { workspace = true }
+cctmux-db = { workspace = true }
+ratatui = { workspace = true }
+crossterm = { workspace = true }
+anyhow = { workspace = true }

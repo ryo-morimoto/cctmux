@@ -1,0 +1,17 @@
+[package]
+name = "cctmux-cli"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[[bin]]
+name = "cctmux"
+path = "src/main.rs"
+
+[dependencies]
+cctmux-protocol = { workspace = true }
+cctmux-tui = { workspace = true }
+clap = { workspace = true }
+anyhow = { workspace = true }

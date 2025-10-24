@@ -1,0 +1,10 @@
+[package]
+name = "cctmux-common"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+# 将来的に必要に応じて追加
